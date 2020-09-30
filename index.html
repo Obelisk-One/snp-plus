@@ -1,0 +1,95 @@
+<html data-cm-hook="1">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Rainbow</title>
+    <script src="resources/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split("&");
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split("=");
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            var subscribed = getUrlParameter("subscribed");
+
+            if (subscribed === "true") {
+                [].forEach.call(
+                    document.querySelectorAll(
+                        "#android-button, #field-email, .button-wrapper, #enter-label, .right-button, #submit-button"
+                    ),
+                    function (el) {
+                        el.classList.add("extended");
+                    }
+                );
+                [].forEach.call(
+                    document.querySelectorAll(
+                        "#android-button, #success-message, #success-message-mobile, .js-cm-form"
+                    ),
+                    function (el) {
+                        el.classList.add("subscribed");
+                    }
+                );
+            }
+        });
+    </script>
+
+    <link rel="stylesheet" href="resources/css/style.css">
+
+    <script src="resources/js/mobile-helper.js"></script>
+    <script defer="" src="resources/js/emoji-pop.js"></script>
+</head>
+
+<body>
+<div id="background-gradient"></div>
+<div id="content">
+    <nav>
+        <a class="nav-logo" href="#"></a>
+
+        <ul>
+            <a class="nav-twitter" href="https://www.obelisk.one" target="_blank">obelisk</a>
+        </ul>
+    </nav>
+
+    <h1>SNS,DAO Stake on your League</h1>
+
+    <div class="button-wrapper">
+        <a href="#" id="app-store-button">
+            <div></div>
+        </a>
+
+        <a href="#" id="app-store-apk">
+            <div></div>
+        </a>
+    </div>
+
+    <div class="app-preview">
+        <div>
+            <img src="resources/css/images/snp-app.png">
+        </div>
+    </div>
+
+    <footer>
+        <div class="jobs">
+            <a href="mailto:yyobelisk@gmail.com"><h3>Work with us</h3></a>
+            <p>We're hiring {rust} engineers and designers</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="about">
+            <p>© OBELISK</p>
+        </div>
+    </footer>
+</div>
+
+
+</body>
+</html>
