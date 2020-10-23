@@ -70,15 +70,15 @@ h6 {
     text-decoration: none;
 }
 
-::selection {
-    background: rgba(164, 47, 255, 0.2);
-    color: #a42fff;
-}
+/*::selection {*/
+/*    background: rgba(164, 47, 255, 0.2);*/
+/*    color: #a42fff;*/
+/*}*/
 
-::-moz-selection {
-    background: rgba(164, 47, 255, 0.2);
-    color: #a42fff;
-}
+/*::-moz-selection {*/
+/*    background: rgba(164, 47, 255, 0.2);*/
+/*    color: #a42fff;*/
+/*}*/
 
 #content {
     overflow: hidden;
@@ -107,16 +107,35 @@ nav {
     top: 30px;
 }
 
+nav a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: rgba(60, 66, 82, 0.8);
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: 500;
+    text-align: center;
+}
+
 .nav-logo {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background: url(images/snp-logo.png) center no-repeat;
-    background-size: 170px 50px;
-    display: block;
-    float: left;
-    height: 50px;
-    margin-left: -9px;
-    width: 170px;
+    color: rgba(60, 66, 82, 0.8);
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin-left: 19px;
+    position: relative;
+    transition: 0.125s ease;
+    will-change: transform;
 }
+
+/*.nav-logo:before {*/
+/*    content: url(images/logo.png);*/
+/*    height: 58px;*/
+/*    left: 0;*/
+/*    position: absolute;*/
+/*    top: 1px;*/
+/*    width: 48px;*/
+/*}*/
 
 nav ul {
     float: right;
@@ -147,14 +166,14 @@ nav ul a:active {
     padding-left: 29px;
 }
 
-.nav-twitter:before {
-    content: "🗿";
-    height: 18px;
-    left: 0;
-    position: absolute;
-    top: 1px;
-    width: 22px;
-}
+/*.nav-twitter:before {*/
+/*    content: url(images/logo.png);*/
+/*    height: 18px;*/
+/*    left: 0;*/
+/*    position: absolute;*/
+/*    top: 1px;*/
+/*    width: 22px;*/
+/*}*/
 
 .nav-contact {
     padding-left: 27px;
@@ -174,8 +193,8 @@ h1 {
     font-size: 3.75em;
     line-height: 1em;
     margin: 0 auto 30px auto;
-    max-width: 632px;
-    padding: 78px 24px 0 24px;
+    max-width: 800px;
+    padding: 78px 24px 24px 24px;
     text-align: center;
 }
 
@@ -191,6 +210,86 @@ h1 {
 
 .button-wrapper.extended {
     transform: translateX(-84.5px);
+}
+
+.wrap {
+    /* 可无需设置高度，靠图片高度 或者 文字的上下padding撑开高度 */
+    /*border: 1px solid;*/
+    margin: 0 auto;
+    max-width: 70%;
+    text-align: center;
+    padding: 60px 0;
+
+}
+.wrap span{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px 0; /* 撑开高度 */
+
+    color: #25292e;
+    max-width: 35%;
+    font-size: 20px;
+    margin-right: 40px;
+    text-align: left;
+    text-align-last:left;/* ie9*/
+}
+.wrap img {
+    /*width: 10px;*/
+    /*height: auto;*/
+    width: 451px;
+    height: 512px;
+    vertical-align: middle;
+}
+
+.app-preview {
+    /*-webkit-user-select: none;*/
+    margin: 0 auto;
+    max-width: 80%;
+    /*pointer-events: none;*/
+    /*text-align: center;*/
+}
+
+/*.app-preview div {*/
+/*    !*padding-bottom: 191.4285714286%;*!*/
+/*    padding-bottom:600px;*/
+/*    position: relative;*/
+/*}*/
+
+.app-preview img {
+    vertical-align: middle;
+    /*position: absolute;*/
+    width: 420px;
+    height: 540px;
+    /*position: absolute;*/
+    margin-left: 50%
+}
+
+.text {
+    color: #25292e;
+    max-width: 30%;
+    font-size: 20px;
+    text-align: left;
+    /*margin: 0;*/
+    /*padding: 50px 15% 50px 15%;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: center;*/
+    /*font-family: SourceHanSansSC-regular;*/
+}
+
+.text1 {
+    color: #25292e;
+    /*max-width: 70%;*/
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 50px 15% 50px 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*font-family: SourceHanSansSC-regular;*/
 }
 
 #app-store-button {
@@ -477,25 +576,6 @@ p#enter-label {
 
 #success-message-mobile.subscribed {
     display: none;
-}
-
-.app-preview {
-    -webkit-user-select: none;
-    margin: 0 auto;
-    max-width: 100%;
-    pointer-events: none;
-    width: 420px;
-    height: 540px;
-}
-
-.app-preview div {
-    padding-bottom: 191.4285714286%;
-    position: relative;
-}
-
-.app-preview img {
-    position: absolute;
-    width: 100%;
 }
 
 footer {
